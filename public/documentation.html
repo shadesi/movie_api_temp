@@ -1,20 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>myFlix API Documentation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie API Documentation</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-  <h1>myFlix API Documentation</h1>
-  <p>Welcome to the myFlix API documentation. This API allows users to access information about different movies, 
-    directors, and genres. Users can also sign up, update their personal information, 
-    and create a list of their favorite movies.</p>
-
-  <h2>Endpoints</h2>
-  <h3>Get All Movies</h3>
-  <p>Endpoint: <code>/movies</code></p>
-  <p>Method: GET</p>
-  <p>Description: Returns a list of all movies.</p>
+    <h1>Movie API Documentation</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Request</th>
+                <th>URL</th>
+                <th>Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td>/movies</td>
+                <td>Returns a list of all movies</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/movies/:title</td>
+                <td>Returns data about a single movie by title</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/genres/:name</td>
+                <td>Returns data about a genre by name/title</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/directors/:name</td>
+                <td>Returns data about a director by name</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/users</td>
+                <td>Registers a new user</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>/users/:username</td>
+                <td>Updates user info</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/users/:username/movies/:movieID</td>
+                <td>Adds a movie to the user's list of favorites</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/users/:username/movies/:movieID</td>
+                <td>Removes a movie from the user's list of favorites</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/users/:username</td>
+                <td>Deregisters a user</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
