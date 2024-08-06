@@ -10,11 +10,10 @@
   "author": "Shane de Silva",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
-    "nodemon": "^3.1.4"
-  },
+  "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
-    "morgan": "^1.10.0"
+    "uuid": "^10.0.0"
   }
 }
